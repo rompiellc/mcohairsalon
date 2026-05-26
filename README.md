@@ -1,36 +1,109 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# M & Co. Hair Salon — Website
+
+A production-ready luxury website for M & Co. Hair Salon, a Black-owned hair salon at 53 Humboldt Ave, Roxbury, Boston.
+
+## Tech Stack
+
+- **Framework:** Next.js 16 (App Router, TypeScript)
+- **Styling:** Tailwind CSS v4 with custom design tokens
+- **Animations:** Framer Motion (scroll-triggered, page transitions)
+- **Forms:** React Hook Form + Zod validation
+- **Icons:** Lucide React
+- **Fonts:** Playfair Display, Cormorant Garamond, Inter, Italiana (via `next/font/google`)
+- **Images:** Next.js Image component (optimized, lazy-loaded)
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+# Install dependencies
+npm install
+
+# Start dev server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# Production build
+npm run build
+npm start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Pages
 
-## Learn More
+| Route | Description |
+|---|---|
+| `/` | Home — hero, about preview, services, quote, gallery, testimonials, location |
+| `/about` | Founder story, philosophy, values, team, community |
+| `/services` | Full service menu organized by category with pricing |
+| `/gallery` | Filterable masonry grid with lightbox |
+| `/book` | Appointment request form + side panel |
+| `/contact` | Contact info columns, map iframe, contact form |
 
-To learn more about Next.js, take a look at the following resources:
+## Customization Checklist (Owner TODOs)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Before going live, replace every placeholder marked `// TODO` in the code. Here's the full list:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Required — Business Info
+- [ ] **Phone number** — `components/Footer.tsx`, `app/page.tsx`, `app/book/page.tsx`, `app/contact/page.tsx`. Replace `(617) XXX-XXXX` and `href="tel:+1XXXXXXXXXX"` with the real number.
+- [ ] **Email address** — `components/Footer.tsx`, `app/contact/page.tsx`. Replace `hello@mcohairstudio.com`.
+- [ ] **Salon hours** — `components/Footer.tsx`, `app/page.tsx`, `app/book/page.tsx`, `app/contact/page.tsx`. Update days and times.
+- [ ] **Founding year** — `app/page.tsx` hero. Update `Est. 2020` if different.
+- [ ] **Website URL** — `app/page.tsx` structured data. Replace `https://mcohairstudio.com` with the real domain.
 
-## Deploy on Vercel
+### Required — Social Media
+- [ ] **Instagram** — Replace `href="https://instagram.com"` in `components/Footer.tsx` and `app/contact/page.tsx`.
+- [ ] **Facebook** — Same files, replace `href="https://facebook.com"`.
+- [ ] **TikTok** — Same files, replace `href="https://tiktok.com"`.
+- [ ] **Instagram handle display** — `app/gallery/page.tsx` — update `@mcohairstudio` to the real handle.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Required — Images
+All images are Unsplash placeholders. Replace with real salon photography:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| File | Section | Suggested photo |
+|---|---|---|
+| `app/page.tsx` hero | Salon interior background | Warm shot of M & Co. interior |
+| `app/page.tsx` about section | Stylist at work | Owner/stylist in session |
+| `app/page.tsx` gallery grid | 6 preview photos | Client styling results |
+| `app/about/page.tsx` | Founder portrait | Professional headshot of M. |
+| `app/about/page.tsx` | 3 team stylist cards | Headshots of each stylist |
+| `app/services/page.tsx` | Hero background | In-action styling shot |
+| `components/GalleryGrid.tsx` | Full gallery (8 items) | Client work portfolio |
+| `app/book/page.tsx` | Hero background | Welcoming salon interior |
+| `app/contact/page.tsx` | Hero background | Exterior or street view |
+
+### Recommended — Copy
+- [ ] **Founder bio** — `app/about/page.tsx` — replace the placeholder story with M.'s real background.
+- [ ] **Team names & bios** — `app/about/page.tsx` — update stylist names, specialties, and bios.
+- [ ] **Stylist dropdown** — `components/BookingForm.tsx` — update the stylist `<option>` list with real names.
+- [ ] **Services & pricing** — `lib/services.ts` — adjust names, descriptions, and prices.
+- [ ] **Testimonials** — `lib/testimonials.ts` — replace with real client quotes.
+
+### Optional Enhancements
+- [ ] **Google Maps embed** — `app/page.tsx` and `app/contact/page.tsx` — get a real embed URL from Google Maps → Share → Embed a map.
+- [ ] **OG image** — Add `public/og-image.jpg` and reference it in `app/layout.tsx` metadata for social sharing previews.
+- [ ] **Favicon** — Replace `public/favicon.ico` with the salon's branded favicon.
+- [ ] **Real booking system** — Connect to Vagaro, Square Appointments, or Calendly by updating `onSubmit` in `components/BookingForm.tsx`.
+- [ ] **Analytics** — Add Vercel Analytics or Google Analytics in `app/layout.tsx`.
+
+## Deployment (Vercel)
+
+1. Push the `mco-hair-salon/` directory to a GitHub repository.
+2. Connect the repo at [vercel.com](https://vercel.com).
+3. Set root directory to `mco-hair-salon/` in Vercel project settings.
+4. Deploy — no environment variables required for the base site.
+
+## Design System
+
+| Token | Value | Use |
+|---|---|---|
+| Primary Black | `#0A0A0A` | Backgrounds, body text |
+| Soft Black | `#1A1612` | Secondary surfaces |
+| Champagne Gold | `#C9A961` | Buttons, accents, dividers |
+| Antique Gold | `#B08D57` | Hover states |
+| Warm Beige | `#E8DCC4` | Light text on dark |
+| Off-White | `#FAF7F0` | Primary body text |
+| Muted Bronze | `#8B6F47` | Subtle accents |
+
+**Fonts:** Playfair Display (headings) · Cormorant Garamond (italic accents) · Inter (body) · Italiana (logo wordmark)
