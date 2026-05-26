@@ -17,8 +17,8 @@ export default function GalleryPage() {
         aria-label="Gallery page header"
       >
         <Image
-          src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1920&q=80"
-          alt="Showcasing beautiful braided hairstyles at M & Co."
+          src="/storefront.png"
+          alt="M & Co. Hair Salon storefront at 53 Humboldt Ave, Roxbury"
           fill
           priority
           className="object-cover img-warm"
