@@ -65,8 +65,8 @@ export default function Home() {
         {/* Background image with Ken Burns CSS animation */}
         <div className="absolute inset-0 overflow-hidden">
           <Image
-            src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=1920&q=80"
-            alt="Luxury hair salon interior with warm lighting"
+            src="/storefront.png"
+            alt="M & Co. Hair Salon storefront at 53 Humboldt Ave, Roxbury"
             fill
             priority
             className="object-cover img-warm ken-burns"
