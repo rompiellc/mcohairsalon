@@ -37,7 +37,7 @@ export default function Home() {
               addressCountry: 'US',
             },
             url: 'https://mcohairstudio.com',
-            telephone: '+1-617-XXX-XXXX',
+            telephone: '+1-617-427-6000',
             openingHoursSpecification: [
               {
                 '@type': 'OpeningHoursSpecification',
@@ -362,12 +362,11 @@ export default function Home() {
                     <p className="font-[family-name:var(--font-inter)] text-xs tracking-[0.2em] uppercase text-[#C9A961] mb-1">
                       Phone
                     </p>
-                    {/* TODO: Replace with real phone number */}
                     <a
-                      href="tel:+1XXXXXXXXXX"
+                      href="tel:+16174276000"
                       className="gold-link font-[family-name:var(--font-inter)] text-sm text-[#E8DCC4]/70 hover:text-[#E8DCC4] transition-colors duration-300"
                     >
-                      (617) XXX-XXXX
+                      (617) 427-6000
                     </a>
                   </div>
                 </div>
@@ -429,12 +428,11 @@ export default function Home() {
               Request Appointment <ArrowRight size={14} />
             </Link>
             <a
-              href="tel:+1XXXXXXXXXX"
+              href="tel:+16174276000"
               className="inline-flex items-center gap-2 font-[family-name:var(--font-inter)] text-xs tracking-[0.2em] uppercase text-[#0A0A0A]/70 hover:text-[#0A0A0A] transition-colors duration-300"
             >
               <Phone size={14} aria-hidden="true" />
-              {/* TODO: Replace with real phone */}
-              Or call (617) XXX-XXXX
+              Or call (617) 427-6000
             </a>
           </div>
         </div>

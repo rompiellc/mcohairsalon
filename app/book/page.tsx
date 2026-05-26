@@ -96,13 +96,12 @@ export default function BookPage() {
                 We&apos;re happy to book your appointment over the phone.
               </p>
               <a
-                href="tel:+1XXXXXXXXXX"
+                href="tel:+16174276000"
                 className="inline-flex items-center gap-3 text-[#C9A961] hover:text-[#B08D57] transition-colors duration-300"
               >
                 <Phone size={16} aria-hidden="true" />
-                {/* TODO: Replace with real phone number */}
                 <span className="font-[family-name:var(--font-playfair-display)] text-xl">
-                  (617) XXX-XXXX
+                  (617) 427-6000
                 </span>
               </a>
             </div>

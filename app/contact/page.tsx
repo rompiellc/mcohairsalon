@@ -101,13 +101,12 @@ export default function ContactPage() {
               </h2>
             </div>
             <div className="space-y-3">
-              {/* TODO: Replace with real phone number */}
               <a
-                href="tel:+1XXXXXXXXXX"
+                href="tel:+16174276000"
                 className="gold-link flex items-center gap-3 font-[family-name:var(--font-inter)] text-sm text-[#E8DCC4]/70 hover:text-[#E8DCC4] transition-colors duration-300"
               >
                 <Phone size={14} aria-hidden="true" />
-                (617) XXX-XXXX
+                (617) 427-6000
               </a>
               {/* TODO: Replace with real email */}
               <a
@@ -124,9 +123,8 @@ export default function ContactPage() {
                 Follow Us
               </p>
               <div className="flex items-center gap-5">
-                {/* TODO: Replace href with real social profile URLs */}
                 <a
-                  href="https://instagram.com"
+                  href="https://www.instagram.com/mandcompanysalon2015/?hl=en"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Instagram"

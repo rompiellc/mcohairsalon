@@ -68,14 +68,13 @@ export default function GalleryPage() {
             Follow us on Instagram for daily inspiration, behind-the-scenes looks, and real client
             transformations.
           </p>
-          {/* TODO: Replace with real Instagram handle */}
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/mandcompanysalon2015/?hl=en"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-8 py-3 border border-[#C9A961] text-[#C9A961] font-[family-name:var(--font-inter)] text-xs tracking-[0.2em] uppercase hover:bg-[#C9A961] hover:text-[#0A0A0A] transition-all duration-300"
           >
-            @mcohairstudio
+            @mandcompanysalon2015
           </a>
         </div>
       </section>

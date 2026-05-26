@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { MapPin, Phone, Mail } from 'lucide-react'
 import { InstagramIcon, FacebookIcon, TikTokIcon } from './SocialIcons'
 
@@ -26,11 +27,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand column */}
           <div className="lg:col-span-1">
-            <Link
-              href="/"
-              className="font-[family-name:var(--font-italiana)] text-2xl text-[#C9A961] tracking-wider block mb-4"
-            >
-              M & Co.
+            <Link href="/" className="block mb-4" aria-label="M & Co. Hair Salon — Home">
+              <Image
+                src="/logo.png"
+                alt="M & Co. Hair Salon"
+                width={80}
+                height={80}
+                className="h-14 w-auto object-contain"
+              />
             </Link>
             <p className="font-[family-name:var(--font-cormorant-garamond)] italic text-[#E8DCC4]/60 text-sm mb-6 leading-relaxed">
               Where Beauty Meets Artistry
@@ -95,11 +99,10 @@ export default function Footer() {
               <li className="flex items-center gap-3">
                 <Phone size={14} className="text-[#C9A961] flex-shrink-0" aria-hidden="true" />
                 <a
-                  href="tel:+1XXXXXXXXXX"
+                  href="tel:+16174276000"
                   className="gold-link font-[family-name:var(--font-inter)] text-xs text-[#E8DCC4]/60 hover:text-[#E8DCC4] transition-colors duration-300"
                 >
-                  {/* TODO: Replace with real phone number */}
-                  (617) XXX-XXXX
+                  (617) 427-6000
                 </a>
               </li>
               <li className="flex items-center gap-3">
@@ -134,7 +137,9 @@ export default function Footer() {
           </p>
           <div className="flex items-center gap-5">
             <a
-              href="#"
+              href="https://www.instagram.com/mandcompanysalon2015/?hl=en"
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="Instagram"
               className="text-[#E8DCC4]/40 hover:text-[#C9A961] transition-colors duration-300"
             >

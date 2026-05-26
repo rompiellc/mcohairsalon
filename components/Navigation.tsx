@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { Menu, X } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -46,10 +47,17 @@ export default function Navigation() {
           {/* Logo */}
           <Link
             href="/"
-            className="font-[family-name:var(--font-italiana)] text-2xl text-[#C9A961] tracking-wider hover:text-[#B08D57] transition-colors duration-300 flex-shrink-0"
             aria-label="M & Co. Hair Salon — Home"
+            className="flex-shrink-0"
           >
-            M & Co.
+            <Image
+              src="/logo.png"
+              alt="M & Co. Hair Salon"
+              width={80}
+              height={80}
+              className="h-14 w-auto object-contain"
+              priority
+            />
           </Link>
 
           {/* Desktop links */}
