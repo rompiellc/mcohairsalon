@@ -127,7 +127,7 @@ export default function Home() {
           {/* Image */}
           <div className="relative aspect-[4/5] overflow-hidden order-2 lg:order-1">
             <Image
-              src="https://images.unsplash.com/photo-1559599101-f09722fb4948?w=900&q=80"
+              src="/homepagegirl.png"
               alt="Stylist at work in M & Co. Hair Salon, Roxbury Boston"
               fill
               className="object-cover img-warm transition-transform duration-700 hover:scale-105"
