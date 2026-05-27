@@ -45,16 +45,22 @@ export const serviceCategories: ServiceCategory[] = [
           'A classic thermal press and curl service that delivers silky, defined results while preserving moisture and minimizing heat damage.',
         price: 'Call for pricing',
       },
-    ],
-  },
-  {
-    id: 'color',
-    name: 'Color',
-    services: [
       {
         name: 'Custom Colors',
         description:
           'Bold, dimensional, or subtly blended — our colorists craft shades tailored to your skin tone and hair texture. Includes a color consultation.',
+        price: 'Call for pricing',
+      },
+      {
+        name: 'Braiding',
+        description:
+          'From box braids to knotless, feed-in to cornrows — intricate braid work installed with care and precision in all sizes and styles.',
+        price: 'Call for pricing',
+      },
+      {
+        name: 'Shampoo & Conditioning',
+        description:
+          'A thorough cleanse and deep conditioning treatment to restore moisture, strength, and shine to your hair.',
         price: 'Call for pricing',
       },
     ],
@@ -79,30 +85,6 @@ export const serviceCategories: ServiceCategory[] = [
         name: 'Frontals',
         description:
           'Frontal and closure installs for a seamless hairline and versatile styling options. Includes blending and customization.',
-        price: 'Call for pricing',
-      },
-    ],
-  },
-  {
-    id: 'braiding',
-    name: 'Braiding',
-    services: [
-      {
-        name: 'Braiding',
-        description:
-          'From box braids to knotless, feed-in to cornrows — intricate braid work installed with care and precision in all sizes and styles.',
-        price: 'Call for pricing',
-      },
-    ],
-  },
-  {
-    id: 'hair-care',
-    name: 'Hair Care',
-    services: [
-      {
-        name: 'Shampoo & Conditioning',
-        description:
-          'A thorough cleanse and deep conditioning treatment to restore moisture, strength, and shine to your hair.',
         price: 'Call for pricing',
       },
     ],
