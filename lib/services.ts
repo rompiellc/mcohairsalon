@@ -112,7 +112,7 @@ export const heroServices = [
     name: 'Custom Colors',
     description:
       'Bold, dimensional, or subtly sun-kissed — our colorists craft shades that work with your natural texture and complement your skin tone.',
-    image: 'https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=600&q=80',
+    image: '/customcolors.png',
     alt: 'Custom hair color service at M & Co. Hair Salon',
     href: '/services#color',
   },
